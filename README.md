@@ -1,6 +1,7 @@
-# GitSearch
+# GitS-earch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+An Angular app that let's you find Git Profiles and Repositories and 
+It was done with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
 ## Development server
 

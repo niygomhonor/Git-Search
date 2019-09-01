@@ -64,7 +64,12 @@ Link:-> https://github.com/niygomhnor/Git-Search
        + ng serve
 6. Open your preferred web browser and load it on local host:
      `http://localhost:4200/`
-This will load for you Github Search
+
+This will load for you Github Search 
+
+##  Navigate this link 
+
+[Git-Search](https://niygomhonor.github.io/Git-Search/) work with it to see its functionality
 
 ## Known Bugs
 
@@ -93,6 +98,7 @@ This will load for you Github Search
   -  Slack:NIYONKURU Honorine
 
 
-License
+##  License
+
 This project is licensed under the MIT License - see the LICENSE file for details Copyright (c) 2019 `NIYONKURU Honorine`
 

@@ -1,0 +1,61 @@
+
+<body>
+    <div class="bg">
+        <div class="jumbotron ">
+            <h1 appDecoration class="h1 text-center text-white animated bounce infinite">Welcome to Git-Search</h1>
+            <hr class="my-4"> 
+            <p class="lead text-center"> <b>An Angular app that let's you find Github Profiles</b></p>
+        </div>
+        
+        <div class="container">
+            <h4 class="text-center h4 text-white">Find Github User here!</h4>
+             <!-- Search form --> 
+            <app-search></app-search>
+            <hr>
+        </div>
+        <!-- Display profile section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="container">
+                        <div class="">
+                            <div *ngIf="user_new">
+                             
+                              <br>
+                              <div class="text-center mt-4 pt-5 ml-4">
+                                  <img src="{{user_new.avatar_url}}" class="align-center img-fluid z-depth-3 rounded-circle" alt="avatar">
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="container mt-4">
+                        <h2 class="text-center h2 h2-responsive text-white">GITHUB PROFILE DETAILS</h2>
+                        <div class="jumbotron" *ngIf="user_new">
+                                <div class="">
+                                    <p appDecoration class="lead"><strong>Name:</strong>{{user_new.name}}</p>
+                                    <p appDecoration><STRong>Username:</STRong>{{user_new.login}}</p>
+                                    <p appDecoration><STRong>Public Repositoies:</STRong>{{user_new.public_repos}}</p>
+                                    <p appDecoration><STRong>Followers:</STRong>{{user_new.followers}}</p>
+                                    <p appDecoration><STRong>Following:</STRong>{{user_new.following}}</p>
+                                    <p appDecoration><STRong>Location:</STRong>{{user_new.location}}</p>
+                                    <p appDecoration><STRong>Created-date:</STRong>{{user_new.created_at|date}}</p>
+                                    <p appDecoration><a href="{{user_new.html_url}}" target="_blank"><button class="btn btn-info">View Github Profile</button></a></p>
+                                    <br>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<div class="">
+<footer class="page-footer font-small black">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:NIYONKURU Honorine </div>
+</footer>
+</div> 

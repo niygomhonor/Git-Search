@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search-form/search/search.component';
 import { NavBarComponent } from './Nav-bar/nav-bar/nav-bar.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+
 import { DecorationDirective } from './decoration.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { ProfileComponent } from './profile/profile.component';
@@ -20,7 +20,7 @@ import { RepositoryComponent } from './repository/repository.component';
     SearchComponent,
     
     NavBarComponent,
-    NotFoundComponent,
+ 
     DecorationDirective,
     DateCountPipe,
     ProfileComponent,

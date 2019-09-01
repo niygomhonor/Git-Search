@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Luckiest+Guy|Oleo+Script&display=swap');
+body{
+    background-color:brown;
+  
+}
+p{
+    font-family: 'Oleo Script', cursive;
+    font-size: 30px;
+}
+a{
+    font-family: 'Luckiest Guy', cursive;
+}
+h2{
+    font-family: 'Oleo Script', cursive;
+    color: brown;
+}
+h1,h4{
+    font-family: 'Oleo Script', cursive;
+}
+.bg>.jumbotron{
+    background-color:rgb(156, 75, 45);
+}

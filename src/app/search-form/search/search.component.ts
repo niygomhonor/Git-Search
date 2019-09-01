@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+// import {environment} from 'src/environments/environment'
+import {HttpClient} from '@angular/common/http'
+import{User} from '../../user';
+import{Repository} from '../../repository'
+import{GitHttpService} from 'src/app/service/git-http.service'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-search',
@@ -6,10 +13,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+@Output() emitSearch=new EventEmitter<any>()
 
-  constructor() { }
+userName:string="";
+user_new:User;
+repos_new:Repository[];
+newUsers:any;
 
+  constructor(private http:HttpClient,private gitHttpService:GitHttpService,private router:Router) { }
+
+ 
   ngOnInit() {
+
+  }
+  
+  SearchUsers(){
+   this.router.navigate(["/profiles",this.userName])
+    this.gitHttpService.getUsers(this.userName);
+    this.user_new=this.gitHttpService.user_new;
+  }
+  
+  SearchRepo(){
+    this.router.navigate(["/repository",this.userName]);
+    this.gitHttpService.getRepo(this.userName);
+    this.repos_new=this.gitHttpService.repos_new;
+    // this.emitSearch.emit(this.userName);
+    
   }
 
 }

@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import{Observable, from} from 'rxjs';
-import {environment} from 'src/environments/environment'
+import {environment} from "../../environments/environment"
 import{User} from '../user';
 import { Repository } from '../repository';
+
 @Injectable({
   providedIn: 'root'
 })
 export class GitHttpService {
   constructor( private http:HttpClient) {
-    this.user_new= new User("",0,``,0,'','',new Date(),``);
+    this.user_new= new User("",0,``,0,'','',new Date(),``,0);
     this.repos_new=[];
   }
    user_new:User;
@@ -26,6 +26,7 @@ getUsers(userName){
     location:string,
     created_at:Date
     html_url:any
+    public_repos:number
   }
   let promise=new Promise((resolve,reject)=>{
    this.http.get<DataUser>("https://api.github.com/users/"+ userName+"?access_token="+environment.apiKey)
@@ -39,7 +40,7 @@ getUsers(userName){
           this.user_new.location=reponse.location;
           this.user_new.created_at=reponse.created_at;
           this.user_new.html_url=reponse.html_url;
-
+          this.user_new.public_repos=reponse.public_repos;
          console.log(this.user_new);
           resolve();
         },

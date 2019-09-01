@@ -8,7 +8,9 @@ export class User {
         public name:string,
         public location:string,
         public created_at:Date,
-        public html_url:any
+        public html_url:any,
+        public public_repos:number,
+
     )
     {}
 }

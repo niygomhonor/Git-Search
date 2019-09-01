@@ -1,6 +1,6 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 // import {environment} from 'src/environments/environment'
-import {HttpClient} from '@angular/common/http'
+// import {HttpClient} from '@angular/common/http'
 import{User} from '../../user';
 import{Repository} from '../../repository'
 import{GitHttpService} from 'src/app/service/git-http.service'
@@ -19,8 +19,9 @@ userName:string="";
 user_new:User;
 repos_new:Repository[];
 newUsers:any;
+created_at:Date;
 
-  constructor(private http:HttpClient,private gitHttpService:GitHttpService,private router:Router) { }
+  constructor(private gitHttpService:GitHttpService,private router:Router) { }
 
  
   ngOnInit() {
@@ -31,14 +32,14 @@ newUsers:any;
    this.router.navigate(["/profiles",this.userName])
     this.gitHttpService.getUsers(this.userName);
     this.user_new=this.gitHttpService.user_new;
+    // this.created_at=new Date(user.created_at);
+
   }
-  
+
   SearchRepo(){
     this.router.navigate(["/repository",this.userName]);
     this.gitHttpService.getRepo(this.userName);
     this.repos_new=this.gitHttpService.repos_new;
-    // this.emitSearch.emit(this.userName);
-    
-  }
 
+  }
 }

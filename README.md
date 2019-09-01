@@ -49,7 +49,7 @@ To work With Github Search
 
 + To get to use GIT-Search fist you need to get to the Github-API-Search--Update-Angular-cli-8 repository.
 
-Link:-> https://github.com/niygomhnor/Git-Search
+Link:-> https://github.com/niygomhonor/Git-Search
 
 1. From there you can access Git-Search.
 

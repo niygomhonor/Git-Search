@@ -1,0 +1,58 @@
+<!-- body section starts here -->
+<!-- <body> -->
+    <div class="bg">
+        <div class="jumbotron bg-info">
+          <h1 class="h1 text-center text-white animated bounce infinite">Welcome to Github Search</h1>
+          <hr class="my-4">
+          <p class="lead text-center">An Angular app that let's you find Github Repositories</p>
+        </div>
+       
+      
+        <!-- this is the section that contains the search form  -->
+        <div class="container">
+          <h4 class="text-center h4 text-white text-white">Check Out Github User Repositories Here!</h4>
+          <!-- <app-search (emitSearch)="searchUsers($event)"></app-search> -->
+          <app-search></app-search>
+          <hr>
+        </div>
+      
+      
+        <!-- This is the section for displaying user profiles -->
+        <h2 class="text-center h2 h2-responsive text-white animated swing delay-3s">{{userName}} GITHUB REPOSITORIES </h2>
+        <div class="container card-columns">
+          <!-- <div class="card" *ngFor="let newRepos of newRepos"> -->
+              <div  class="card" *ngFor="let reposit of repos_new">
+            <div class="card">
+              <div class="card-header text-center blue-gradient text-dark"><h2>{{reposit.name}}</h2></div>
+              <div class="card-body">
+                <p class="card-text"><strong>Full name: </strong>{{reposit.full_name}}</p>
+                <p class="card-text"><strong>Create at: </strong>{{reposit.created_at|date}}</p>
+                <p class="card-text"> <strong>Language: </strong> {{reposit.language}}.</p>
+                <!-- Button -->
+                <a href="{{reposit.html_url}}" target="_blank" class="btn btn-info btn-lg btn-block">Check it on Github</a>
+              </div>
+              <div class="card-footer flex-footer">
+                <small class="text-muted"><strong>Branch: </strong>{{reposit.default_branch}} </small>
+                <small class="text-muted ml-4"><strong> Forks: </strong>{{reposit.forks_count}}</small>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <!-- </body> -->
+      <!-- Footer section -->
+      <div class="">
+        <footer class="page-footer font-small blue">
+      
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
+            <a href="" target="_blank"> NIYOBKURU Honorine</a>
+          </div>
+          <!-- Copyright -->
+      
+        </footer>
+      
+      
+      </div>
+      <!-- Footer -->
